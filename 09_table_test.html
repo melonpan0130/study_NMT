@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            table{
+                border : solid 1px black;
+                border-collapse: collapse;
+                font-size: 20px;
+                width: 200px;
+            }
+            td {
+                width : 100px;
+                border: solid 1px red;
+                text-align: center
+            }
+            thead {
+                background-color: pink;
+            }
+            th{
+                border: solid 1px red;
+            }
+            tfoot {
+                background-color: green;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <figure> <!--sementic tag: 표를 설명-->
+            <figcaption>국내에서 사용되는 브라우저</figcaption>
+        </figure>
+        <table>
+            <!--<caption>국내 사용 브라우저</caption>-->       
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>금액</th>
+                    <th>주소</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>뷔</td>
+                    <td>500</td>
+                    <td>서울</td>
+                </tr>
+                <tr>
+                    <td>음</td>
+                    <td>300</td>
+                    <td>서울</td>
+                </tr>
+                <tr>
+                    <td>웅</td>
+                    <td>100</td>
+                    <td>서울</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">합계: 900</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

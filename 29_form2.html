@@ -1,0 +1,41 @@
+<html>
+    <!-- input type="text"
+    1. required: 무조건 입력
+    2. autofocus: 자동으로 포커스 생성
+    3. placeholder: 힌트
+    4. disabled: 입력 못하게 함
+    5. autocomplete: 자동완성 기능 
+    
+    input type="text/color/number/range/ .. -->
+    <head><title>Web Form</title></head>
+    <body>
+        <h3>Select color</h3>
+        <input type="color" value="#238e23" onchange="document.body.style.color=this.value">
+        <hr>
+
+        <h3> 달, 시간 입력 </h3>
+        <input type="month" value="2019-04" /><br>
+        <input type="week" value="2019-W04" /><br>
+        <input type="date"><br>
+        <input type="datetime-local"><br>
+        <input type="time" />
+        <hr>
+
+        <input type="range" min="0" max="100" list="temp">
+        <datalist id="temp">
+            <option value="10" label="LOW">
+            <option value="50" label="MEDIUM">
+            <option value="100" label="HIGH">
+        </datalist>
+        <hr>
+
+        <input type="number" min="0.0" max="10.0" step="0.5">
+        온도설정 : 10&deg;
+        <input type="range" min="10" max="30" list="temp2">30&deg;
+        <datalist id="temp2">
+            <option value="12" label="LOW">LOW</option>
+            <option value="20" label="MEDIUM">MEDIUM</option>
+            <option value="28" label="HIGH">HIGH</option>
+        </datalist>
+    </body>
+</html>

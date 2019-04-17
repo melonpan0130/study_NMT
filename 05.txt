@@ -1,0 +1,23 @@
+Semantic tag
+- <p>, <h3>: we don't know what they working
+   <summary>, <header>, <content> 
+- Semantic tag: struct the web text, it make be more useful 
+  <figure> <body> <thead> <tfoot>
+-----------------------------------------------------------------
+1. header
+- title of all the web site
+- 
+
+2. nav
+ - menu, index
+
+3. section
+ - tie contents by topic
+use <h1><h6>
+
+4. article
+ - realitive text
+
+5. aside
+- ad, tip or note that out of topic
+- usually left or right 화장실 가고싶ㅇ,,,

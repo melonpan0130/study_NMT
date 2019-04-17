@@ -1,0 +1,67 @@
+<!-- 크기
+    - fontsize : 20px, 20pt, 150%, 1.5em
+    - 절대크기 : px, pt
+    - 상대크기 : %, em
+    - 크롬의 기본 글자크기 :16px
+    
+    2. 배경 속성
+    - 색상: background-color
+    - 그림 : background-image: url(그림파일 위치)
+    - repeat : 반복 여부 (repeat-x 가로 반복, repeat-y 세로반복)
+        no-repeat : 반복 없음
+        background-repeat: repeat;
+-->
+<html>
+    <head>
+        <style>
+            div {
+                margin: 10px 30px;
+                height: 20px;
+                color: white;
+                padding: 5px;
+                font-size: 25px;
+                font-weight: bold;
+                overflow: hidden;
+            }
+            p {
+                margin: 5px;
+            }
+
+            #background {
+                height: 400px;
+                width: 100%;
+                background-color: aqua;
+                background-image: url('../html5_study/img/dog.jpg');
+                background-repeat: repeat;
+                color: chocolate;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS 색 활용</h1>
+        <hr>
+        <div style="background-color: brown">brown</div>
+        <div style="background-color: palevioletred">palevioletred</div>
+        <div style="background-color: blueviolet">blueviolet</div>
+        <div style="background-color:green">green</div>
+        <div style="background-color: darkgoldenrod">darkgoldenrod</div>
+        <hr>
+        <p style="font-size: 40px;">남 욕할 시간에 내 할일 먼저</p>
+        <p style="font-size: 40pt;">남 욕할 시간에 내 할일 먼저</p>
+        <p style="font-size: 200%;">남 욕할 시간에 내 할일 먼저</p>
+        <p style="font-size: 75%;">남 욕할 시간에 내 할일 먼저</p>
+        <p style="font-size: 1.2em;">남 욕할 시간에 내 할일 먼저</p>
+        <hr>
+        <div id="background">
+            <h1>천재음악자</h1>
+            <ul>
+                <li>모짜르트</li>
+                <li>베토벤</li>
+                <li>바흐</li>
+                <li>비발디</li>
+                <li>하이든</li>
+            </ul>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,36 @@
+<!-- 8.연결 선택자
+    - 형제 선택자 (~)
+    h1~p { .. }
+    -> h1 형제들 중 모든 p태그에 적용
+
+    - 인접 형제 선택자 (+)
+    h1+p { .. }
+    -> h1 바로 옆의 p태그 하나에 적용
+-->
+<html>
+    <head>
+        <title>형제 선택자</title>
+        <style>
+            h1~ul {
+                color: green;
+            }
+            h1+ul {
+                color: violet;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="container">
+            <h1>예약 방법 및 요금</h1>
+            <ul>
+                <li>직접 통화</li>
+                <li>문자 남기기</li>
+            </ul>
+            <ul>
+                <li>1인: 30000원</li>
+                <li>2인: 70000원</li>
+                <li>3인: 100000원</li>
+            </ul>
+        </section>
+    </body>
+</html>

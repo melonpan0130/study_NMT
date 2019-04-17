@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{
+            border-right: white;
+            border-left: none;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: solid 1px rgb(255, 87, 25);
+            width: 100px;
+            text-align: center;
+            background-color: rgb(206, 223, 255);
+        }
+
+        th {
+            border-top: solid 3px rgb(170, 123, 170);
+            background-color: rgb(179, 195, 226);
+            border-bottom: solid 3px rgb(170, 123, 170);
+        }
+
+        tr:hover td{
+            background-color: coral;
+        }
+
+        .bottom {
+            border-bottom: solid 3px rgb(170, 123, 170);
+        }
+
+        .left {
+            border-left: none;
+        }
+
+        .right {
+            border-right: none;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>수업시간표</caption>
+        <tr class="top">
+            <th class="left">시간/요일</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th class="right">목</th>
+        </tr>
+        <tr>
+            <td class="left">1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="right one" rowspan="3">CSS</td>
+        </tr>
+        
+        <tr>
+            <td class="left">2</td>
+            <td rowspan="2">HTML5</td>
+            <td></td>
+            <td class="right"></td>
+        </tr>
+        
+        <tr>
+            <td class="left">3</td>
+            <td></td>
+            <td class="right"></td>
+        </tr>
+        
+        <tr>
+            <td class="left four">4</td>
+            <td class="four"></td>
+            <td class="four" colspan="2">JavaScript</td>
+            <td class="right four"></td>
+        </tr>
+        
+        <tr class="bottom">
+            <td class="left five">5</td>
+            <td class="five"></td>
+            <td class="five"></td>
+            <td class="five"></td>
+            <td class="right five"></td>
+        </tr>
+    </table>
+</body>
+</html>

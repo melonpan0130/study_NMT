@@ -1,0 +1,80 @@
+<!-- list 속성
+    - type : disc square circle
+    - image : 그림
+    - position : inside, outside(위치 지정)
+    -->
+<html>
+    <head>
+        <style>
+            ul, ol {
+                border: solid 2px skyblue;
+            }
+
+            li {
+                border: solid 2px green;
+            }
+            .A {
+                list-style-type: circle;
+            }
+            .B {
+                list-style-type: square;
+                list-style-position: inside;
+            }
+            .C li{
+                /*list-style-image: url('../html5_study/img/dog.jpg');*/
+                list-style: none;
+            }
+
+            .C li::before {
+                content: '';
+                display: inline-block;
+                height: 50px;
+                width: 50px;
+                background-image: url('../html5_study/img/dog.jpg');
+                background-size: cover;
+            }
+
+            .D {
+                list-style-type: upper-roman;
+            }
+
+            .E {
+                list-style-type: lower-alpha;
+                list-style-position: inside;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Coffee Menu</p>
+        <ul class="A">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ul>
+        
+        <ul class="B">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ul>
+        
+        <ul class="C">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ul>
+
+        
+        <ol class="D">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ol>
+            
+        <ol class="E">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ol>
+    </body>
+</html>

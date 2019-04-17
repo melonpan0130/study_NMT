@@ -1,0 +1,136 @@
+<!-- 3. text 속성
+    - text-indent: 들여쓰기
+    - 정렬 : text-align; left, right, justify
+
+-->
+<html>
+    <head>
+        <style>
+            .first, .second {
+                width: 300px;
+                border: solid 10px black;
+                padding: 10px;
+                float: left;
+                margin: 20px;
+                position: relative;
+            }
+            .second {
+                width: 400px;
+            }
+            h3 {
+                text-align: right;
+                font: italic bolder 30px '바른나눔고딕';
+            }
+            .p1 {
+                text-indent: 50px;
+            }
+            .p2 {
+                text-indent: 55px;
+                text-align: center;
+            }
+            span {
+                text-decoration-line: line-through;
+            }
+            b {
+                text-decoration-line: overline;
+            }
+            a {
+                text-decoration-line: none;
+                color:darkcyan;
+            }
+            .first>div {
+                background-color: #eeeeee;
+                border: none;
+                position: relative;
+                width: 110%;
+                top: 10px;
+                left: 10px;
+                z-index: -1;
+            }
+            .first>div>div {
+                position: relative;
+                width: 90%;
+                top: -10px;
+                left: -10px;
+            }
+
+            .first p:nth-child(n+7){
+                font: italic lighter 20px "바른나눔고딕";
+            }
+            .first p:nth-child(7){
+                text-decoration-line: overline;
+            }
+            .first p:nth-child(8) {
+                text-decoration-line: line-through;
+            }
+            .first p:nth-child(9) {
+                text-decoration-line:underline;
+            }
+
+            .second div:nth-child(1) {
+                line-height: 1em;
+            }
+            .second div:nth-child(2) {
+                line-height: 1.5;
+            }
+            .second div:nth-child(3) {
+                line-height: 200%;
+            }
+
+            .second>div {
+                background-color: #f77171;
+                position: relative;
+                top: 10px;
+                left: 10px;
+            }
+            .second>div>div {
+                position: relative;
+                font: italic bolder 20px '바른나눔고딕';
+                top: -10px;
+                left: -10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="first">
+            <div>
+                <div>
+                    <h3>텍스트 꾸미기</h3>
+                    <hr>
+                    <p class="p1">HTML의 태그만으로 기존의 워드 프로세서와 같이 들여쓰기, 정렬, 공백, 간격 등과 세밀한 <span>텍스트 제어</span>를 할수 없다</p>
+                    <p class="p2">그러나 <b>스타일 시트</b>는 이를 가능하게 한다. 들여쓰기, 정렬에 대해서 알아본다.</p>
+                    <a href="www.naver.com">밑줄이 없는 네이버 링크</a>
+                    <hr>
+                    <p>this is text</p>
+                    <p>this is text</p>
+                    <p>this is text</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="second">
+            <div>
+                <div>
+                    <p>1em: 산토끼 토끼야 어디를 가느냐</p>
+                    <p>1em: 산토끼 토끼야 어디를 가느냐</p>
+                    <p>1em: 산토끼 토끼야 어디를 가느냐</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>1em/1.5: 산토끼 토끼야 어디를 가느냐</p>
+                    <p>1em/1.5: 산토끼 토끼야 어디를 가느냐</p>
+                    <p>1em/1.5: 산토끼 토끼야 어디를 가느냐</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>1em/200%: 산토끼 토끼야 어디를 가느냐</p>
+                    <p>1em/200%: 산토끼 토끼야 어디를 가느냐</p>
+                    <p>1em/200%: 산토끼 토끼야 어디를 가느냐</p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

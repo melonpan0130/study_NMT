@@ -1,0 +1,47 @@
+<!-- 
+    1. border-radious
+    border-radious: 20px 40px 50px 80px; 좌상단부터 시게방향
+    border-radious: 20px;
+    border-radious: 20px 50px; 대각선으로 20 50
+    border-radious: 20px/50px; 타원형으로 
+    정원: width, height, radious: 50%;
+    타원: radious: 50%;
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            div {
+                background-color: gray;
+                text-align: center;
+                margin: 10px;
+                padding: 20px;
+                width: 200px;
+                height: 20px;
+            }
+
+            #d1 {
+                border-radius: 30px;
+            }
+            #d2 { border-radius: 70px 20px; }
+            #d3 { border-radius: 50px 30px 30px 10px;}
+            #d4 { border-radius: 50%;}
+            #d5 { border-radius: 50%;
+                line-height: 100px;
+            width: 100px;
+            height: 100px;}
+        </style>
+    </head>
+    <body>
+        <div id="d0">박스0</div>
+        <div id="d1">박스1</div>
+        <div id="d2">박스2</div>
+        <div id="d3">박스3</div>
+        <div id="d4">박스4</div>
+        <div id="d5">박스5</div>
+    </body>
+</html>

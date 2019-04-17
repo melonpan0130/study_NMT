@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{
+            border : solid 1px black;
+            border-collapse: collapse;
+            font-size: 20px;
+            font-weight: lighter;
+            width: 200px;
+            padding: 10px;
+            box-shadow: 1px 1px 5px 5px #eeeeee;
+        }
+        table td,th {
+            padding: 0 10px;
+        }
+        td {
+            width : 100px;
+            border: solid 1px red;
+            text-align: center;
+        }
+        thead {
+            background-color: greenyellow;
+        }
+        th{
+            border: solid 1px red;
+        }
+        tfoot {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption style="border: solid 1pt gray">Caption</caption>
+        <thead>
+            <tr>
+                <th colspan="2" rowspan="2">01</th>
+                <th colspan="3">02</th>
+            </tr>
+            <tr>
+                <th>06</th>
+                <th>07</th>
+                <th>08</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3" style="background-color:coral">25</th>
+            
+            <th style="padding: 0 50px;background-color:coral">13</th>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <th style="background-color:coral">17</th>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <th style="background-color:coral">21</th>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <th colspan="2">09</th>
+                <th>10</th>
+                <th>11</th>
+                <th>12</th>
+            </tr>
+        </tfoot>
+        
+    </table>
+
+</body>
+</html>

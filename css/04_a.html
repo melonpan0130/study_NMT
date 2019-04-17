@@ -1,0 +1,82 @@
+<!--6 가상 선택자
+    일반 태그가 아니라 사용자의 반응에 의해 발생할 수 있는 상태
+    - a:link
+    - a:visited
+    - a:hover
+    - a: active
+    - first-child
+    - last-child
+    - nth-child(n)
+    - first-letter
+    -
+    --->
+
+<html>
+    <head>
+        <title>가상 선택자</title>
+        <style>
+.first:first-letter {
+    font-size: 50px;
+    color: red;
+    font-weight: bolder;
+}
+
+.first:first-line {
+    background-color: gold;
+}
+
+a:link {
+    text-decoration: none;
+    color: gray;
+}
+a:visited {
+    text-decoration: none;
+    color: gray;
+}
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+a:active {
+    text-decoration: underline;
+    color: yellow;
+}
+
+li:nth-child(2n) {
+    background-color: coral;
+    color: crimson;
+}
+li:nth-child(2n+1){
+    color: #133f19;
+}
+ul li:hover {
+    background-color: #238232;
+}
+h1 {
+    color: red;
+}
+h1::first-letter {
+    color: #238232;
+}
+ul {
+    background-color: #eeeeee;
+}
+
+        </style>
+    </head>
+    <body>
+        <p class="first">Html5 웹 프로그래밍에서는 HTML, CSS, Javascript를 해야 합니다.</p>
+        <hr>
+        <a href="http://www.daum.net">다음</a>
+        <a href="http://www.google.com">구글</a>
+        <hr>
+        <h1>Programming</h1>
+        <ul>
+            <li>Install Web Server</li>
+            <li>Write Document</li>
+            <li>Write Style sheet</li>
+            <li>DOM programming</li>
+        </ul>
+        <p>60점 이하는?</p>
+    </body>
+</html>

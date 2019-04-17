@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        h1~ul {
+            color: greenyellow;
+            font-weight: bolder;
+            background-color: orange;
+        }
+        h1+ul {
+            color: red;
+        }
+        
+        a[href] {/*
+            background-color: violet;
+            color: white;
+            font-size: 15pt;*/
+        }
+
+        a[target='_blank'] {
+            text-decoration: none;
+            font-style: italic;
+            color: aqua;
+            padding: 10pt;
+        }
+
+        a[class~="button"] {
+            border: 2px solid red;
+            box-shadow: rgba(0,0,0,0.4), 10px, 10px;
+        }
+
+        a[title|="us"] {
+            color: indianred;
+        }
+
+        a[title|="jap"] {
+            font-size: 30pt;
+        }
+
+        a[title^="us"] {
+            text-decoration: underline;
+        }
+
+        a[title^="jap"] {
+            text-decoration: underline;
+        }
+
+        a[title^="chi"] {
+            color: blue;
+        }
+
+        a[href$="hwp"] {
+            padding: 30px;
+        }
+
+        a[href$="xis"] {
+            font-style: italic;
+        }
+    </style>
+
+</head>
+<body>
+    <!--1) 형제 선택자 
+        1. 인접형제
+        h1+ul : h1태그 바로 밑의 ul태그 하나만 적용
+        2. 연결형제
+        h1~ul : h1태그 바로 밑의 모든 ul에 적용
+    
+        2)속성 선택자
+        1. a[href]{ color:red; } : href 속성을 갖고 있는 a태그에 적용됨
+        
+        2. [속성=값] 선택자
+        속성이 정확히 "값"인 요소에만 스타일 적용
+        a[target ='_blank'] {}
+        
+        3. [속성~= 값] 선택자
+        [class~="button"] {}
+
+        4. [속성|=값] 선택자
+        특정 값이 포함되어있는 요소에 적용하는데 -으로 연결 된 것
+        -으로 연결된 것만 적용
+        a[title|="us"] {}
+        a[title|="jap"] {}
+
+        5. [속성^=값] 선택자
+        툭정 값으로 시작되는 요소에 적용함
+        a[title^="us"]{}
+        a[title^=]
+
+        6. [속성$=값] 선택자
+        값형태로 끝나는 것
+        -->
+    <h1>예약 방법 및 요금</h1>
+    <ul>
+        <li>직접 통화</li>
+        <li>음성 남기기</li>
+    </ul>
+    <ul>
+        <li>1인: 40000</li>
+        <li>2인: 50000</li>
+        <li>3인: 70000</li>
+    </ul>
+    <hr>
+    <ul>
+        <li><a>메인 메뉴:</a></li>
+        <li><a href="#">Menu 1</a></li>
+        <li><a href="#">Menu 2</a></li>
+        <li><a href="#">Menu 3</a></li>
+        <li><a href="#">Menu 4</a></li>
+    </ul>
+    <hr>
+    <ul>
+        <li><a href="http://www.daum.net" target="_blank">집으로</a></li>
+        <li><a href="http://www.google.com" target="_self">게시판</a></li>
+        <li><a href="http://www.naver.com" target="_top">방명록</a></li>
+    </ul>
+    <hr>
+    <h1>외국어 서비스</h1>
+    <ul>
+        <li><a href="#" title="us">영어</a></li>
+        <li><a href="#" title="us-english">영어33</a></li>
+        <li><a href="#" title="jap">일본어</a></li>
+        <li><a href="#" title="japanese">일본어33</a></li>
+        <li><a href="#" title="chi">중국어</a></li>
+    </ul>
+    <ul>
+        <li><a>메인 메뉴:</a></li>
+        <li><a href="#">Menu 1</a></li>
+        <li><a href="#">Menu 2</a></li>
+        <li><a href="#" class="button">Menu 3</a></li>
+        <li><a href="#" class="flat button">Menu 4</a></li>
+    </ul>
+    <hr>
+    <h1>파일서비스</h1>
+    <ul>
+        <li><a href="a.hwp">아래한글</a></li>
+        <li><a href="aa.xis">엑셀 파일</a></li>
+    </ul>
+</body>
+</html>
