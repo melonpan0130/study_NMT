@@ -1,0 +1,68 @@
+<!--table css
+    1) border-collapse: 셀 간격 없애기 collapse
+    2) table-layout: 각 셀의 너비를 일정하게 (fixed / auto)
+    3) caption-side: 위치지정(bottom/middle/top)
+    4) vertical-align: 세로 정렬 (middle/ top/ bottom)
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            table {
+                width: 600px;
+                border-collapse: collapse;
+                table-layout: fixed;
+            }
+
+            th, td {
+                width: 100px;
+                text-align: center;
+                padding: 5px 10px;
+                border-top: solid 1px gray;
+                border-bottom: solid 1px gray;
+            }
+
+            th {
+                background-color: lightcoral;
+            }
+
+            table caption {
+                caption-side: bottom;
+                text-align: right;
+                font-size: 8pt;
+                margin-top: 10px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <table>
+            <caption>이게 되니</caption>
+            <tr>
+                <th>html</th>
+                <th>css</th>
+                <th>c</th>
+            </tr>
+            <tr>
+                <td>javascript</td>
+                <td>c++</td>
+                <td>c#</td>
+            </tr>
+            <tr>
+                <td>java</td>
+                <td>jsp</td>
+                <td>php</td>
+            </tr>
+            <tr>
+                <td>spring</td>
+                <td>db</td>
+                <td>oracle</td>
+            </tr>
+        </table>
+    </body>
+</html>

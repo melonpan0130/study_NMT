@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            div {
+                width: 200px;
+                height: 50px;
+                padding: 10px;
+                margin: 20px;
+                line-height: 50px;
+                display: inline-block;
+                text-align: center;
+                background-color: orange;
+            }
+            div:nth-child(1){
+                box-shadow: 20px 20px;
+            }
+
+            div:nth-child(2) {
+                box-shadow: 10px 10px;
+            }
+
+            div:nth-child(3) {
+                box-shadow: -10px 10px;
+            }
+
+            div:nth-child(4) {
+                box-shadow: 10px -10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>그림자 박스(기본)</div>
+        <div>그림자 박스(기본 우회)</div>
+        <div>그림자 박스(방향:좌하)</div>
+        <div>그림자 박스(방향:우상)</div>
+    </body>
+</html>

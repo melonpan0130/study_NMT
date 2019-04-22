@@ -1,0 +1,90 @@
+<!--transition
+    - 특정 조건이 발생했을때 일정 시간동안 모양이나 스타일이 변하는 것
+    
+    - 형식: transition-property: 속성 이름
+    1) all : 모든 요소에 적용
+    2) transition-property: background-color(속성이 배경에만 transition 적용)
+    3) transition-property: width, height:(속성이 width, height에만 transition 적용)
+
+    - transition-duration: 트랜지션 진행시간 조정
+    ex) transition-duration: 2s, 1s, 3s;
+
+    - transition-timing-function: 진행의 속도 조절
+    1) linear : 기본 속도
+    2) ease : 천천히-빠르게-천천히
+    3) ease-in: 처음에만 천천히
+    4) ease-out: 나중에만 천천히
+    5) ease-in-out: 처음과 마지막에만 천천히
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            div:nth-child(1) {
+                width: 100px;
+                height: 100px;
+                background-color: rgb(255, 137, 137);
+                transition-property: width, height, background-color;
+                transition-duration: 2s, 1s;
+            }
+
+            div:nth-child(1):hover {
+                background-color: rgb(64, 255, 182);
+                width: 200px;
+                height: 200px;
+            }
+
+            div:nth-child(n+2) {
+                width: 100px;
+                height: 50px;
+                background-color: yellowgreen;
+                margin: 10px;
+                text-align: center;
+                line-height: 50px;
+                transition-property: width;
+                transition-duration: 1s;
+            }
+
+            div:nth-child(2):hover {
+                width: 500px;
+                transition-timing-function: linear;
+            }
+            div:nth-child(3):hover {
+                width: 500px;
+                transition-timing-function: ease;
+            }
+            div:nth-child(4):hover {
+                width: 500px;
+                transition-timing-function: ease-in;
+            }
+            div:nth-child(5):hover {
+                width: 500px;
+                transition-timing-function: ease-out;
+            }
+            div:nth-child(6):hover {
+                width: 500px;
+                transition-timing-function: ease-in-out;
+            }
+            div:nth-child(7):hover {
+                width: 500px;
+                transition-timing-function: linear;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <hr>
+        <div>Level 1</div>
+        <div>Level 2</div>
+        <div>Level 3</div>
+        <div>Level 4</div>
+        <div>Level 5</div>
+        <div style="background: none;"></div>
+    </body>
+</html>
