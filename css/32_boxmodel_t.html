@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Box Model</title>
+        <style>
+            * {
+                /*border: solid 1px rebeccapurple;*/
+            }
+            .d {
+                width: 200px; /*width 정하지 않으면 100% */
+                height: 150px;
+                margin: 10px;
+                background-color: lightcoral;
+            }
+            p {
+                background: rgb(161, 97, 12);
+            }
+            .a {
+                position: relative;
+            }
+            span{
+                padding: 50px;
+                background-color: lightblue;
+            }
+            img {
+                margin: 10px;
+                padding: 10px;
+            }
+            #list {
+                width: 100%;
+                background-color: orange;
+                margin: 100px 0 ;
+            }
+            div ul li {
+                display: inline;
+                padding: 10px;
+                margin: 10px;
+            }
+
+            #list ul li a {
+                text-decoration: none;
+
+            }
+            #list ul li:hover {
+                background-color: aqua;
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="d">div태그와 p태그</div>
+
+        <span>span 태그</span>
+        <p>block</p>
+        <p>block</p>
+        <p>block</p>
+
+        <div><img src="../img/lion1.JPG"></div>
+        <hr>
+        <h1>메뉴 리스트 작성</h1>
+        <div id="list">
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+            
+        </div>
+    </body>
+</html>
