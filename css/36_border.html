@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <!-- border 
+            1. style: solid dotted dashed double groove inset outset
+            2. width
+            3. color / border-bottom-color border-top-color border-bottom-color-->
+        <style>
+            div {
+                width: 200px;
+                height: 100px;
+                text-align: center;
+                line-height: 100px;
+                margin: 20px;
+                background-color: rgb(255, 255, 255);
+                float: left;
+            }
+
+            div:nth-child(1) {
+                border: solid 2px pink;
+            }
+
+            div:nth-child(2) {
+                border: dotted 2px blue;
+            }
+
+            div:nth-child(3) {
+                border: groove 10px darkgoldenrod;
+            }
+
+            div:nth-child(4) {
+                border: inset 10px lightcoral;
+            }
+
+            div:nth-child(5) {
+                border: outset 10px darksalmon;
+            }
+
+            div:nth-child(6) {
+                border-bottom: double 10px lightseagreen;
+                background-color: beige;
+            }
+            div:nth-child(7) {
+                border-top: dashed seagreen;
+                background-color: beige;
+            }
+
+            div:nth-child(8) {
+                height: 50px;
+                line-height: 0px;
+                border-top: solid 1px red;
+                border-bottom: solid 1px red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>solid</div>
+        <div>dotted</div>
+        <div>groove</div>
+        <div>inset</div>
+        <div>outset</div>
+        <div>border-bottom-double</div>
+        <div>border-top-dashed</div>
+        <div><h1>Hello world</h1></div>
+    </body>
+</html>

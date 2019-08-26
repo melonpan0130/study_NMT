@@ -1,0 +1,66 @@
+<!--
+    css(), attr(), html(), text()
+    
+    1. setter : 값을 지정 
+    $('h1').css("color", "red") : css, attr 매개변수 2개
+    $('h1').html("hello") : html, text 매개변수 1개
+
+    2. getter : 값 가져오기
+    $('h1').css("color") : css, attr 매개변수 1개
+    $('h1').html() : html, text 매개변수 0개
+
+    3. setter 지정하는 방법
+        1) 문자열, 문자열
+        2) 객체로 지정
+        3) 함수로 지정
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Jquery1</h1>
+    <h1>Hello Jquery2</h1>
+    <h1>Hello Jquery3</h1>
+    <script>
+        // 1. setter 지정하는 방법
+        // 1) 문자열로 지정; css(문자열, 문자열)
+        $("h1").css("color", "yellow");
+
+        // 2) 객체로 지정; css({속성: 값, 속성: 값...})
+        $("h1").css({
+            "color":"blue",
+            "backgroundColor":"yellow",
+            "textAlign":"center"
+        });
+
+        // 3) 함수로 지정하는 방법; function(){}
+        $("h1").css("backgroundColor", function() {
+            return "green";
+        });
+
+        var array = ["red", "blue", "green"];
+        $("h1").css("backgroundColor", function(index){
+            return array[index];
+        });
+        // jQuery 객체가 여러개 있을 때 사용
+
+        $("h1").css({
+            "color": function(index){
+                return array[index];
+            }, 
+            "backgroundColor" : "yellow",
+            "textAlign":"left"
+        }).html("hello");
+
+        // 2. getter
+        var rgb = $("h1").css("color");
+        // alert(rgb);
+    </script>
+</body>
+</html>

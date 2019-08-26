@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+    <img>
+    <img>
+    <img>
+    <script>
+        // 1. 문자열 src 속성: dog.jpg
+        $("img").attr("src", "../img/dog.JPG");
+
+        // 2. 객체로
+        $("img").attr({
+            'src' : "../img/dog.JPG",
+            'alt':'test image1'
+        });
+        
+        // 3. 함수로
+        $("img").attr({
+            'src' : function(index){
+                return "../img/dog.JPG" + index;
+            },
+            'alt':'test image2'
+        })
+
+        // getter
+        var test = $("img").attr("src");
+        alert(test);
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            border: solid 2px #FFFFFF;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        tr td {
+            padding: 10px;
+            height: 30px;
+            line-height: 30px;
+            border: solid 2px #95A8A2;
+        }
+        tr td:nth-child(2n+1){
+            text-align: center;
+            width: 100px;
+            background-color: #435964;
+            color: white;
+        }
+        textarea {
+            resize: none;
+            width: 98%;
+        }
+        button {
+            color: white;
+            background-color: #435964;
+            width: 50px;
+            height: 30px;
+            border: none;
+        }
+        button {
+            margin: 0 20px;
+        }
+        body>div {
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="input.txt" method="GET" name="form">
+        <table>
+            <tr>
+                <td>이름</td>
+                <td><input type="text"></td>
+                <td>생년월일</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>아이디</td>
+                <td><input type="text"></td>
+                <td>비밀번호</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td><input type="email" placeholder="aaa@naver.com"></td>
+                <td>정보수신</td>
+                <td><input type="checkbox">이메일<input type="checkbox">SMS</td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td>
+                    <select>
+                        <option>서울특별시</option>
+                    </select>
+                    <input type="text" placeholder="상세주소">
+                </td>
+                <td>성별</td>
+                <td><input type="radio" name="gender">Male <input type="radio" name="gender">Female</td>
+            </tr>
+            <tr>
+                <td>연락처1</td>
+                <td><input type="text"></td>
+                <td>연락처2</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>메모</td>
+                <td colspan="3"><textarea placeholder="메모를 남겨주세요" ></textarea></td>
+            </tr>
+        </table>
+        <center>
+            <button type="reset">취소</button>
+            <button type="submit">등록</button>
+        </center>
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!--
+    JQuery로 문서를 조작하는 방법
+    - 객체 :  var id = document.getElementById('result');
+             -객체--   --------------태그-----------------
+    - html 문서
+    1. 문서객체 선택
+    2. 문서객체 생성
+    3. 객체를 직접 삽입
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Hello JQuery</h1>
+        <script>
+            // 1. 문서 객체 선택
+            $("h1").css("color", "red");
+
+            // 2. 문서 객체 생성
+            $("<h2></h2>").append("body").html("Hello append");
+
+            // 3. 문서 객체 직접 삽입
+            var tag = document.querySelector("h1");
+            $(tag).css("background-color", "blue");
+        </script>
+    </body>
+</html>

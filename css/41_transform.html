@@ -1,0 +1,64 @@
+<!-- transform
+    1. 이동 : tranlate(x,y) / translateX(x) / tranlateY(y)
+    2. 확대 축소 : scale(x,y) / scaleX(x) /scaleY(y)
+    3. 왜곡 : skew(x,y) / skewX(x) / skewY(y)
+    4. 회전 : rotate(rdeg)
+    transform : translate(10,20)
+    transform : translate(-10, -20)
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            tr td {
+                text-align: center;
+                padding: 10px;
+                color: antiquewhite;
+            }
+
+            tr:nth-child(2n-1) {
+                font-size: 25px;
+                background-color: palevioletred;
+            }
+            
+            .t2 { transform: translateY(20px); }
+            .t3 { transform: rotate(10deg); }
+            .t4 { transform: skew(5deg, 15deg); }
+            .t5 { transform: scale(0.5); }
+            .t6 { transform: scale(1.2); }
+            
+            .mouse { transition-duration: 2s; }
+            .mouse:hover { transform: rotate(60deg); }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>기본</td>
+                <td>이동</td>
+                <td>회전</td>
+            </tr>
+            <tr>
+                <td><img src="../img/lion1.JPG"></td>
+                <td><img class="t2" src="../img/lion1.JPG"></td>
+                <td><img class="t3" src="../img/lion1.JPG"></td>
+            </tr>
+            <tr>
+                <td>왜곡</td>
+                <td>축소</td>
+                <td>확대</td>
+            </tr>
+            <tr>
+                <td><img class="t4" src="../img/lion1.JPG"></td>
+                <td><img class="t5" src="../img/lion1.JPG"></td>
+                <td><img class="t6" src="../img/lion1.JPG"></td>
+            </tr>
+        </table>
+        <hr>
+        <img class="mouse" src="../img/lion1.JPG">
+    </body>
+</html>

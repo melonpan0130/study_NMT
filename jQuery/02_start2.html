@@ -1,0 +1,43 @@
+<!--
+    * jQuery 함수($)
+    - html문서의 객체들을 jQuery함수의 매개변수로 넣어주면 
+        jQuery에서 만든 여러가지 함수들을 사용할 수 있음
+    
+    jquery(document).ready(function(){})
+    -> $(document).ready(function(){})
+    -> $(function(){})
+
+    * 선택자
+    id : document.getElementsById()
+    - 필요한 태그객체를 가지고 오기 위한 방법중의 하나
+    - jQuery의 선택자는 css선택자와 거의 동일
+
+    1. * : html문서 내의 모든 태그를 선택
+    2. h1 : h1 태그만 선택 -> 배열
+    3. # : id 선택자 -> 하나
+    4. . : class 선택자 ->배열
+    
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#result").append("Hello World1");
+            })
+            $(document).ready(function(){
+                $("#result").append("Hello World2");
+            })
+            $(document).ready(function(){
+                $("#result").append("Hello World3");
+            })
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

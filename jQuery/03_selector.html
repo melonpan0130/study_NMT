@@ -1,0 +1,36 @@
+<!--
+    * 선택자
+    id : document.getElementsById()
+    - 필요한 태그객체를 가지고 오기 위한 방법중의 하나
+    - jQuery의 선택자는 css선택자와 거의 동일
+
+    1. * : html문서 내의 모든 태그를 선택
+    2. h1 : h1 태그만 선택 -> 배열
+    3. # : id 선택자 -> 하나
+    4. . : class 선택자 ->배열
+    
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+            $(function(){
+                $("*").css("background-color","yellow");
+                $("p").css("color","red");
+                $("#test1").css("background-color","green");
+                $(".a").css("font-size","30px");
+            })
+        </script>
+    </head>
+    <body>
+        <p id="test1">p태그와 아이디 test1입니다.</p>
+        <p class="a">p태그의 클래스 a입니다.</p>
+
+        <div id="test2">div태그의 아이디 test2입니다.</div>
+        <div>그냥 div태그입니다.</div>
+    </body>
+</html>

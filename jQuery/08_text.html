@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+
+    <script>
+        $("h2").text('<img src="../img/dog.jpg" />'); // setter; 해석하지 않고 문자열 그대로 출력
+
+        var test = $("h2").text(); // getter; 모두 출력
+        alert(test);
+    </script>
+</body>
+</html>

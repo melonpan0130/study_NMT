@@ -1,0 +1,45 @@
+<!--
+    * jQuery
+    - 자바스크립트 라이브러리
+    - 모든 브라우저에서 실행되는 클라이언트 프로그램
+    - 존 레식(2006년)
+
+    * 기능
+    1. animation
+    2. css
+    3. event
+    4. Ajax 통신
+    5. JSON 문서 파싱
+
+    * CDN(Content delivery network)
+    다운로드 하지 않고 파일이 위치한 서버주소를 적어서 코드에 적용하는 방법
+
+    * JS 와의 차이
+    - window.onload는 여러개 있어도 마지막 것만 실행
+    - jQuery 는 모두 다 실행
+    - window.onload <> $(document).ready(function(){})
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script>
+            window.onload = function() {
+                document.getElementById("result").innerHTML += "Hello World1";
+            }
+
+            window.onload = function() {
+                document.getElementById("result").innerHTML += "Hello World2";
+            }
+
+            window.onload = function() {
+                document.getElementById("result").innerHTML += "Hello World3";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            #container {
+                padding: 50px;
+                padding-right: 150px;
+            }
+            table {
+                border-collapse: collapse;
+                width: 40%;
+            }
+            
+            table tr:first-child {
+                border-bottom: solid 5px #EE7560;
+            }
+
+            th, td {
+                padding: 10px;
+                text-align: left;
+            }
+            
+            .content {
+                border: solid 1px #eee;
+            }
+
+            tr td:first-child {
+                background-color: antiquewhite;
+                width: 40%;
+            }
+            img {
+                float: left;
+                width: 350px;
+                margin: 20px;
+            }
+
+            button {
+                padding: 15px 20px;
+                color: white;
+                background-color: black;
+                border: none;
+                margin: 10px;
+                margin-right: 0;
+                float: right;
+                width: 100px;
+            }
+            #buttons button:first-child{
+                background-color: #3466c2;
+            }
+            #buttons button:last-child{
+                background-color: rgb(68, 68, 68);
+            }
+
+            .money td:last-child{
+                font-weight: bold;
+                color: #3466c2;
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <img src="../img/002.jpg">
+            <table>
+                <tr>
+                    <th>Red Dress</th>
+                    <th></th>
+                </tr>
+                <tr class="content">
+                    <td>판매가</td>
+                    <td>19,000</td>
+                </tr>
+                <tr class="content">
+                    <td>상품코드</td>
+                    <td>1123456</td>
+                </tr>
+                <tr class="content">
+                    <td>사이즈 및 옵션</td>
+                    <td><select id="option">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select></td>
+                </tr>
+                <tr class="content">
+                    <td>구매수량</td>
+                    <td><input type="number" min="1" max="10" placeholder="1"></td>
+                </tr>
+                <tr class="content">
+                    <td>배송비</td>
+                    <td>무료배송</td>
+                </tr>
+                <tr class="content money">
+                    <td>결재금액</td>
+                    <td>19,000원</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th id="buttons">
+                        <button>구매하기</button>
+                        <button onclick="location.href=''">장바구니</button>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

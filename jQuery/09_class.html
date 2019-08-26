@@ -1,0 +1,49 @@
+<!-- 클래스 추가 삭제
+    -addClass(), removeClass(), toggleClass()
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>addClass/removeClass/toggleClass</title>
+    <style>
+        .header {
+            color: brown;
+            text-align: center;
+        }
+
+        .red {
+            background-color: rgb(214, 124, 124);
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello New World</h1>
+
+    <script>
+        $("h1").attr("class", "header");
+        $("h1").addClass("red");
+
+        setTimeout(() => {
+            $("h1").removeClass("header");    
+        }, 2000);
+
+        // hasClass() : true/false
+        var output1 = $("h1").hasClass("red")
+        var output2 = $("h1").hasClass("blue");
+        $("<h2></h2>").html(output1.toString()).appendTo("body");
+        $("<h2></h2>").html(output2.toString()).appendTo("body");
+        // hasClass true일 때는 무조건 출력, false일 때는 toString()이용
+
+        $("h1").removeAttr("class"); // h1 클래스 모두 삭제
+        $("h1").remove(); // h1 모두 제거
+
+        $("h2").toggleClass("a"); // 생성
+        // $("h2").toggleClass("a"); // 제거
+
+    </script>
+</body>
+</html>
