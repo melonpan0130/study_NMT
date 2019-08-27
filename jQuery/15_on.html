@@ -1,0 +1,35 @@
+<!-- 이벤트 종료
+    click/dbclick/mouseenter/mouseleave/mouseup/mousedown/hover/focus/blur/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <script>
+        $("h1").on("click", function(event) {
+
+        });
+
+        $("h1").on({
+            click : function() {
+                $(this).css({'color': 'red', 'backgroundColor':'yellow'});
+            },
+            dbclick: function() {
+                $(this).css({'color': 'black', 'backgroundColor':'yellow'});
+            },
+            mouseenter: function() {
+                $(this).css({'color': 'blue', 'backgroundColor':'yellow'});
+            },
+            mouseleave: function() {
+                $(this).css({'color': 'violet', 'backgroundColor':'yellow'});
+            }
+        });
+    </script>
+</body>
+</html>
