@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Document</title>
+    <script>
+        function append1() {
+            $("#a1").append("<p>새롭게 추가된 p 태그</p>");
+        }
+
+        function append2() {
+            var p = $("<p>"); // p는 태그지만, 앞에 $를 붙이면 객체가 됨
+            p.text("새롭게 추가된 p태그 2");
+            $("#a1").append(p);
+        }
+
+        function prepend1() {
+            $("#a1").prepend("<p>새롭게 추가된 p 태그</p>");
+        }
+
+        function prepend2() {
+            var p = $("<p>");
+            p.text("새롭게 추가된 p태그 2");
+            $("#a1").prepend(p);
+        }
+    </script>
+</head>
+<body>
+    <h1>문서 객체 삽입</h1>
+    <div id="a1">
+        <p>p태그</p>
+    </div>
+    <button onclick="append1()">HTML코드를 뒤에 추가</button>
+    <button onclick="append2()">HTML객체를 만들어서 뒤에 추가</button>
+    <button onclick="prepend1()">HTML코드를 뒤에 추가</button>
+    <button onclick="prepend2()">HTML객체를 만들어서 뒤에 추가</button>
+</body>
+</html>

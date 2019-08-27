@@ -1,0 +1,47 @@
+<!-- 객체 삽입과 이동
+    1. appendTo()
+    $(A).appendTo("body") -> A를 body 뒤에 붙인다
+
+    2. preparedTo()
+    $(A).preparedTo("body") -> A를 body 앞에 붙인다
+    
+    3. insertAfter()
+    $(A).insertAfter("body") -> A를 body 뒤에 붙인다
+    
+    4. insertBefore()
+    $(A).insertBefore("body") -> A를 body 앞에 붙인다
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        body {
+            border: solid 1px violet;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World1</h1>
+    <h2>Hello World2</h2>
+    <h3>Hello World3</h3>
+</body>
+<script>
+    // 문서 객체 삽입
+    /*
+    $("<h1></h1>").html("appendTo").appendTo("body");
+    $("<h1></h1>").html("prependTo").prependTo("body");
+    $("<h1></h1>").html("insertAfter").insertAfter("body");
+    $("<h1></h1>").html("insertBefore").insertBefore("body");
+    */
+
+    // 문서 이동
+    setInterval(() => {
+        $("h1:nth-child(1)").appendTo("body");
+    }, 2000);
+</script>
+</html>

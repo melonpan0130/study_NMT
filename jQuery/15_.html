@@ -1,0 +1,31 @@
+<!-- 
+    1. event.preventDefault(); 기본 이벤트 제거
+    2. event.stopPropagation(); 뒤에 연결되는 이벤트를 제거
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <a href="http://www.daum.net">Daum</a>
+    <script>
+        $("a").click(function(event) {
+            $(this).html('Click!!');
+            $(this).css('color', 'red');
+            // event.preventDefault(); // 기본 이벤트 제거
+            // event.stopPropagation(); // 뒤에 연결되는 이벤트를 제거
+            return false;
+        });
+
+        $("body").click(function() {
+            $(this).css("backgroundColor", "yellow");
+        });
+    </script>
+</body>
+</html>
