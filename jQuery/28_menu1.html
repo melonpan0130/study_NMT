@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+    </style>
+    <script>
+        $(function() {
+            $("header")
+            .mouseenter(function() { $(this).stop(); $(this).animate({"height":"300px"}, "slow"); })
+            .mouseleave(function() { $(this).stop(); $(this).animate({"height":"50px"}, "slow"); });
+        })
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: green;
+        }
+        header {
+            height: 50px;
+            overflow: hidden;
+            margin-top: 20px;
+            background-image: linear-gradient(white 50px, rgba(255, 255, 255, 0.5) 50px);
+        }
+        header li {
+            list-style-type: none;
+        }
+        #first>li {
+            float: left;
+            padding: 20px 40px;
+        }
+
+        #first>li>ul>li {
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul id="first">
+            <li>1st Menu
+                <ul>
+                    <li>2nd Menu</li>
+                    <li>2nd Menu</li>
+                    <li>2nd Menu</li>
+                </ul>
+            </li>
+            <li>1st Menu
+                <ul>
+                    <li>2nd Menu</li>
+                    <li>2nd Menu</li>
+                    <li>2nd Menu</li>
+                    <li>2nd Menu</li>
+                </ul>
+            </li>
+            <li>1st Menu
+                <ul>
+                    <li>2nd Menu</li>
+                    <li>2nd Menu</li>
+                    <li>2nd Menu</li>
+                </ul>
+            </li>
+            <li>1st Menu
+                <ul>
+                    <li>2nd Menu</li>
+                    <li>2nd Menu</li>
+                    <li>2nd Menu</li>
+                </ul>
+            </li>
+            <li>1st Menu
+                <ul>
+                    <li>2nd Menu</li>
+                    <li>2nd Menu</li>
+                    <li>2nd Menu</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!-- on 이벤트
+    이벤트 종류에 상관하지 않고 모두 다 등록
+    $(객체).on(이벤트이름, function() {})
+    
+    one 
+    일회용
+
+    off
+    이벤트 제거
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function() {
+            $("#a1").on("click", function() {
+                alert("a1");
+            });
+
+            $("#a2").one("click", function() {
+                alert("a2");
+            });
+
+            $("#a3").on({
+                click: function() { $(this).css("backgroundColor", "red") },
+                mouseenter: function() { $(this).css("color", "white") },
+                mouseleave: function() { $(this).css("color", "red") }
+            })
+        })
+        
+        function removeEvent() {
+            // 이벤트 제거
+            $("#a1").off("click");
+            $("#a2").off("click");
+        }
+    </script>
+</head>
+<body>
+    <h3 id="a1">on</h3>
+    <button type="button" onclick="remove_event()">이벤트 제거</button>
+    <h3 id="a2">one</h3>
+    <h3 id="a3">이벤트 세팅</h3>
+</body>
+</html>

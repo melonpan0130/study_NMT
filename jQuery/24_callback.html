@@ -1,0 +1,42 @@
+<!-- 1. jQuery 에서 기본적으로 제공하는 효과
+    show(), hide(), toggle(), slideDown(), slideUp(), fadeIn(), fadeOut(), fadeToggle()
+
+     2. 사용방법
+     1) $(selector).method();
+     2) $(selector).method(speed);
+     3) $(selector).method(speed, callback); 메서드가 다 완료된 후 실행되는 함수를 말함
+     4) $(selector).method(speed, easing, callback);
+
+     * fadeTo() 지정된 투명도까지 사라짐
+     fadeTo(0.3, speed, callback)
+
+     * callback function : 효과가 종료되면 자동으로 호출되는 함수
+        $("#a1").fadeTo(1000, 0.3, function() {
+            console.log("fadeTo");
+        });
+        -> 1초동안 투명도가 0.3만큼 된 다음에 함수 실행
+-->
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <style>
+            #a1 {
+                border: 1px solid red;
+                background-color: yellow;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+        <script>
+            function test_callback() {
+                $("#a1").fadeOut(1000, function() {
+                    alert("effect end");
+                })
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="test_callback()">callback함수</button>
+        <div id="a1">콜백함수 테스트</div>
+    </body>
+</html>

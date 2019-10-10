@@ -1,4 +1,3 @@
-<!-- -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,16 +7,18 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         $(function() {
-            $("h1").click(function(event) {
-                $(this).html(function(index, html) {
-                    // html에는 jquery에서 가지고 온 객체의 내용이 들어감.
-                    return html+"*";
-                });
+            // con클래스 제거(문자열)
+            $("div").removeClass("con");
+            // bg클래스 제거 (함수)
+            $("div").removeClass(function() {
+                return "bg"
             });
-        });
+        })
     </script>
 </head>
 <body>
-    <h1>Hello</h1>
+    <div class="con">class 1</div>
+    <div class="c1 bg">class 2</div>
+    <div class="c2 bg">class 3</div>
 </body>
 </html>

@@ -8,16 +8,14 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         $(function() {
-            $("h1").click(function(event) {
-                $(this).html(function(index, html) {
-                    // html에는 jquery에서 가지고 온 객체의 내용이 들어감.
-                    return html+"*";
-                });
+            $("button").click(function(event) {
+                $("body").css("background-color", "yellow");
             });
         });
     </script>
 </head>
 <body>
-    <h1>Hello</h1>
+    <h1>이벤트 연습</h1>
+    <button onclick="bg()">배경색 변정</button>
 </body>
 </html>

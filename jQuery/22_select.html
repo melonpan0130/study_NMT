@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function() {
+            $("#searchButton").click(function() {
+                console.log($("#searchKey").val()+' : '+$("#searchValue").val());
+            })
+
+            $("#searchValue").keypress(function(e) {
+                if(e.keyCode == 13) {
+                    console.log($("#searchKey").val()+' : '+$("#searchValue").val());
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <select id="searchKey">
+        <option>제목</option>
+        <option>내용</option>
+        <option>글쓴이</option>
+    </select>
+    <input type="text" id="searchValue">
+    <input type="submit" id="searchButton" value="검색" />
+</body>
+</html>

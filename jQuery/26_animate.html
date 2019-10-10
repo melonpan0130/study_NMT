@@ -1,0 +1,74 @@
+<!--animation 
+    css : 다이렉트로 변화된 결과만 출력
+    animate() : 변화하는 중간과정까지 출력
+    
+    1. 형식
+    1) $(selector).animate(object);
+    2) $(selector).animate(object, speed);
+    3) $(selector).animate(object, easing);
+    4) $(selector).animate(object, easing, callback);
+
+    ** Object 에서 
+
+    * position속성 : style에서 position이 relative, absolute이어야 함
+    * background-color 안먹음
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            position: relative;
+        }
+    </style>
+    <script>
+        function setSize() {
+            $("#a1").animate({width:'500px', height:'500px'}, "slow");
+        }
+
+        function setOpacity() {
+            $("#a1").animate({opacity: '0.5'}, "slow");
+        }
+
+        function setPosition() {
+            $("#a1").animate({left: '50px', top: '50px'}, "slow");
+        }
+
+        function setBackground() {
+            $("#a1").animate({backgroundColor: 'yellow'}, "slow");
+        }
+
+        function settotal() {
+            $("#a1").animate({
+                width: '30px',
+                height: '30px',
+                opacity: '0.5',
+                left: '50px',
+                top: '50px'
+            }, "slow");
+        }
+
+        function setSequence() {
+            $("#a1").animate({width:'300px', height:'300px'}).delay(1000)
+            .animate({opacity:'0.2'}, "slow").delay(1000)
+            .animate({left: '30px', top: '100'}, "slow");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="setSize()">size 설정</button>
+    <button onclick="setOpacity()">Opacity</button>
+    <button onclick="setPosition()">Position</button>
+    <button onclick="setBackground()">Background</button>
+    <button onclick="settotal()">종합 설정</button>
+    <button onclick="setSequence()">순차 설정</button>
+    <div id="a1"></div>
+</body>
+</html>

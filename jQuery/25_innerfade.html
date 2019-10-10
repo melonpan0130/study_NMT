@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="jquery.innerfade/js/jquery.innerfade.js"></script>
+    <style>
+        img {
+            width: 150px;
+            height: 150px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+    </style>
+    <script>
+        $(function() {
+            // 아이디가 inner_fade인 친구에게 화면 전환 효과를 적용
+            $("#inner_fade").innerfade({
+                animationtype:'fade', // slide
+                speed: 700, // slow, fast, 숫자
+                timeout: 2000,
+                type: "random", // random, sequence, randomstart
+                containerheight: '350px'
+            });
+            
+        })
+    </script>
+</head>
+<body>
+    <ul id="inner_fade">
+        <li><img src="../img/lion1.JPG"></li>
+        <li><img src="../img/lion2.JPG"></li>
+        <li><img src="../img/lion3.JPG"></li>
+        <li><img src="../img/lion4.JPG"></li>
+        <li><img src="../img/lion5.JPG"></li>
+    </ul>
+</body>
+</html>

@@ -10,12 +10,11 @@
     <h1>Hello World</h1>
     <script>
         // 1 문제 : 뒤의 h1를 클릭해도 실행안됨
-        /*
         $("h1").on("click", function() {
             $("<h1></h1>").html("Hello World").appendTo("body");
         });
-        */
-        // 2 이벤트 핸들러를 따로 변수에 넣음. 문제 : 방법이 너무 복잡;;
+        
+        // 2 이벤트 핸들러를 따로 변수에 넣음. 문제 : 방법이 너무 복잡
         var handler = function() {
             $("<h1></h1>").html("Hello World").appendTo("body").click(handler);
         };

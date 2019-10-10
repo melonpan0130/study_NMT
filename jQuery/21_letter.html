@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function() {
+            // $("#texts").keyup(function(){
+                
+            // });
+
+            $("#texts").on("input", function() {
+                var number = 150 - $(this).val().length;
+                
+                if(number < 0) $("h2").css("color", "red");
+                else $("h2").css("color", "black");
+                $("h2").html(number);
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="" id="Form">
+        <h1>글자 수 세기</h1>
+        <h2 id="number">150</h2>
+        <textarea id="texts" style="width: 400px; height: 200px"></textarea>
+    </form>
+</body>
+</html>

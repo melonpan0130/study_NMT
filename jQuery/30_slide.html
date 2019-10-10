@@ -1,0 +1,72 @@
+<!--
+    자동 이미지 슬라이드
+    1. slides.eq()
+    2. 
+        var 이름 = setInterval(할일, 시간) // 반복
+    3.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .slideshow {
+            position: relative;
+        }
+
+        .slideshow img {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%); /* 가운데 정렬 */
+            min-width: 960px; /* slideshow의 최소 가로 길이*/
+            display: none;
+        }
+    </style>
+    <script>
+        $(()=> {
+            var slides = $(".slideshow img");
+            var count = slides.length; // 4
+            var current = 0, next;
+            slides.eq(current).fadeIn();
+            
+            setInterval(() => {
+                next = (current+1)%4;
+                slides.eq(current).fadeOut();
+                slides.eq(next).fadeIn();
+                current = next;
+            }, 1000);
+        })
+    </script>
+    <!-- <script>
+        // 은주의 방법
+        $(()=> {
+            $(".slideshow img").first().fadeIn();
+            setInterval(() => {
+                $(".slideshow img").first().fadeOut().appendTo(".slideshow");
+                $(".slideshow img").first().fadeIn();    
+            }, 1000);
+        })
+    </script> -->
+</head>
+<body>
+    <div class="header">
+        <div class="inner">
+            <div class="slideshow">
+                <img src="./29_slide/slide-1.jpg" alt="img1">
+                <img src="./29_slide/slide-2.jpg" alt="img2">
+                <img src="./29_slide/slide-3.jpg" alt="img3">
+                <img src="./29_slide/slide-4.jpg" alt="img4">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!--animation 
+    css : 다이렉트로 변화된 결과만 출력
+    animate() : 변화하는 중간과정까지 출력
+    
+    1. 형식
+    1) $(selector).animate(object);
+    2) $(selector).animate(object, speed);
+    3) $(selector).animate(object, easing);
+    4) $(selector).animate(object, easing, callback);
+
+    ** Object 에서 
+
+    * position속성 : style에서 position이 relative, absolute이어야 함
+    * background-color 안먹음
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+    </style>
+    <script>
+        $(function() {
+            // $("li").on("mouseenter", ()=> { $("li").css('backgroundColor','yellow'); })
+            // .on("mouseleave", ()=>{ $(this).css('backgroundColor','white'); });
+            $("li").mouseenter(function() { $(this).css("backgroundColor", "orange"); });
+            $("li").mouseleave(function() { $(this).css("backgroundColor", "white"); });
+            $(".a li").hide();
+
+            // menu open버튼을 클릭하면 서브메뉴가 나타나게 하시오.
+            $("h2").click(function() {
+                $(".a li").show();
+            });
+
+            // div를 클릭했을 떄, animate를 이용해서 div를 오른쪽으로 250px 이동
+            $("div").click(function() {
+                $(this).animate({left: '250px'}, "slow");
+            });
+        })
+    </script>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>김연진</li>
+        <li>최효성</li>
+        <li>성경주</li>
+    </ul>
+    <hr>
+    <h1>menu open버튼을 클릭하면 서브메뉴가 나타나게 하시오.</h1>
+    <h2>menu open</h2>
+    <ul class="a">
+        <li>HOME</li>
+        <li>MENU</li>
+        <li>ROOM</li>
+    </ul>
+    <h1>div를 클릭했을 떄, animate를 이용해서 div를 오른쪽으로 250px 이동</h1>
+    <div></div>
+</body>
+</html>

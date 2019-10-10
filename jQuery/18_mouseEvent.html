@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        .event {
+            background-color: brown;
+            color: white;
+        }    
+    </style>
+    <script>
+        $(function() {
+            $("#a1").on("click", function(){
+                $(this).addClass('event');
+            })
+
+            $("#a2").on("dblclick", function() {
+                $(this).addClass('event');
+            })
+
+            $("#a3").on("mouseenter", function() { 
+                $(this).addClass('event')
+            }).on("mouseleave", function() { $(this).removeClass('event')});
+
+            $("#a4").on("mouseup", function() {
+                $(this).addClass('event');
+            }).on("mousedown", function() {
+                $(this).removeClass('event');
+            });
+            
+            // hover 주의!
+            $("#a5").hover(function(){ // mouse enter
+                $(this).addClass('event');
+            }, function() { // mouse up
+                $(this).removeClass('event');
+            })
+
+            $("#a6").focus(function() {0
+                $(this).addClass('event');
+            })
+        });
+    </script>
+</head>
+<body>
+    <h3 id="a1">Click</h3>
+    <h3 id="a2">dblClick</h3>
+    <h3 id="a3">mouseeenter/mouseleave</h3>
+    <h3 id="a4">mouseup/mousedown</h3>
+    <h3 id="a5">mouse hover</h3>
+    <input type="text" id="a6">focus
+</body>
+</html>
